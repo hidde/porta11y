@@ -7,12 +7,13 @@
  */
 
 function noFakeLists(blocks, options = {}) {
+  const regex = options.regex || /\n\s*[-*+–—]/;
   const fakeListBlocks = (blocks || []).filter(
     block =>
       block._type === 'block' &&
       block.children.some(blockPart =>
         blockPart._type === 'span' &&
-        blockPart.text.match(options.regex || /\n\s*[-*+–—]/)
+        blockPart.text.match(regex)
       )
   ).map(
     (block, index) => [{ _key: block._key }] || [index]
