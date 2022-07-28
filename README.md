@@ -27,7 +27,7 @@ The `lang` utility provides an annotation to demark an inline text snippet as be
 import { lang } from 'portable-text-tools'
 
 export default {
-  title: 'Contenu',
+  title: 'Content',
   name: 'content',
   type: 'array',
   of: [
