@@ -22,7 +22,7 @@ function lang(options = {}) {
 
   return {
     title: options.title || 'Language switcher',
-    name: options.lang || 'lang',
+    name: options.name || 'lang',
     type: 'object',
     fields: [tag],
   }
