@@ -76,6 +76,6 @@ export default {
       type: 'block',
     },
   ],
-  validation: Rule => Rule.custom(noFakeLists),
+  validation: Rule => Rule.custom(noFakeLists()),
 }
 ```
