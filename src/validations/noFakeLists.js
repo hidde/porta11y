@@ -15,12 +15,10 @@ function noFakeLists(blocks, options = {}) {
         blockPart.text.match(options.regex || /\n\s*[-*+–—]/)
       )
   ).map(
-    (block, index) => [{_key: block._key}] || [index]
+    (block, index) => [{ _key: block._key }] || [index]
   ) || [];
 
-  return fakeListBlocks.length === 0
-    ? true
-    : {
+  return fakeListBlocks.length === 0 || {
         message: options.message || 'This looks like a list, but it is plain text. Use the bulleted list option.',
         paths: fakeListBlocks
       }

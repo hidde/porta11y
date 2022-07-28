@@ -50,6 +50,7 @@ export default {
 ### No fake lists
 
 Sometimes lists on web pages are not marked up as lists, with `ul`, `ol` or `dl` elements, but separate list items with merely returns instead. This validation rule finds those cases.
+
 #### Options
 
 | Option name | Default value           | Required |
