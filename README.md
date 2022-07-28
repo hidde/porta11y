@@ -1,6 +1,10 @@
-# portable-text-tools
+# Portable Text tools
 
-Functions and objects that make it easier to add fields to Portable Text editors for accessibility meta information, like language changes or abbreviations.
+[Portable Text](https://www.sanity.io/guides/introduction-to-portable-text) is a JSON based rich text specification for modern content editing platforms. It is designed to be a format for text editing interfaces and for serializing into any human-readable format.
+
+It provides an incredible opportunity to create editing experiences with accessibility in mind. This repository is a collection of Portable Text utilities to enrich the base editor with additional accessibility-related tools. Namely:
+
+- [Language switcher](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
 
 ## Language switcher
 
