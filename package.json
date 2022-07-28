@@ -1,0 +1,25 @@
+{
+  "name": "portable-text-tools",
+  "description": "Sanity accessibility utilities for Portable Text editors, like language changes or abbreviations.",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hidde/portable-text-tools.git"
+  },
+  "keywords": [
+    "sanity",
+    "portable",
+    "text",
+    "tools"
+  ],
+  "author": "Hidde de Vries, Kitty Giraudel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hidde/portable-text-tools/issues"
+  },
+  "homepage": "https://github.com/hidde/portable-text-tools#readme"
+}
