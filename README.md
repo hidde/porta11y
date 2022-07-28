@@ -65,7 +65,7 @@ Sometimes lists on web pages are not marked up as lists, with `ul`, `ol` or `dl`
 #### Example
 
 ```js
-import { lang } from 'portable-text-tools'
+import { noFakeLists } from 'portable-text-tools'
 
 export default {
   title: 'Content',
