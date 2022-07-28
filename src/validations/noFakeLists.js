@@ -1,11 +1,11 @@
 /**
  * @param {Object} [options = {}] - Options for the validation
- * @param {RegExp} [options.regex = /\n\s*[-*+–—]/] - Validation regex
+ * @param {RegExp} [options.regex = /^\s*[-*+–—]/] - Validation regex
  * @param {String} [options.message = "This looks like a list, but it is plain text. Use the bulleted list option."] - Message to display when the validation triggers
  */
 function noFakeLists(options = {}) {
   return function (blocks) {
-    const regex = options.regex || /\n\s*[-*+–—]/
+    const regex = options.regex || /^\s*[-*+–—]/
     const fakeListBlocks =
       (blocks || [])
         .filter(

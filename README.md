@@ -60,7 +60,7 @@ Sometimes lists on web pages are not marked up as lists, with `ul`, `ol` or `dl`
 | Option name | Default value | Required |
 | :-- | :-- | :-- |
 | message | This looks like a list, but it is plain text. Use the bulleted list option. | No |
-| regex | `/\n\s*[-*+–—]/` | No |
+| regex | `/^\s*[-*+–—]/` | No |
 
 #### Example
 
