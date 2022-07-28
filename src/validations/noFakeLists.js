@@ -13,7 +13,7 @@ function noFakeLists(blocks, options = {}) {
       block._type === 'block' &&
       block.children.some(blockPart =>
         blockPart._type === 'span' &&
-        blockPart.text.match(regex)
+        regex.test(blockPart.text)
       )
   ).map(
     (block, index) => [{ _key: block._key }] || [index]
