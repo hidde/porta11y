@@ -6,11 +6,12 @@ It provides an incredible opportunity to create editing experiences with accessi
 
 - [Language switcher](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
 
-## Language switcher
+## Annotations
+### Language switcher
 
 The `lang` utility provides an annotation to demark an inline text snippet as being expressed in another language than the main content. This is important for screen-readers (WCAG 2.1 SC 3.1.2 and ATAG B.2.1.1). Refer to [this article](https://kittygiraudel.com/2022/07/25/international-content-with-sanity-portable-text/) for more information.
 
-### Options
+#### Options
 
 | Option name | Default value           | Required |
 | :---------- | :---------------------- | :------- |
@@ -21,7 +22,7 @@ The `lang` utility provides an annotation to demark an inline text snippet as be
 | regex       | `/^[a-z]+(-[a-z]+)?$/i` | No       |
 | regexName   | language tag            | No       |
 
-### Example
+#### Example
 
 ```js
 import { lang } from 'portable-text-tools'
@@ -42,5 +43,36 @@ export default {
       ],
     },
   ],
+}
+```
+
+## Validations
+### No fake lists
+
+Sometimes lists on web pages are not marked up as lists, with `ul`, `ol` or `dl` elements, but separate list items with merely returns instead. This validation rule finds those cases.
+
+#### Options
+
+| Option name | Default value           | Required |
+| :---------- | :---------------------- | :------- |
+| message     | This looks like a list, but it is plain text. Use the bulleted list option.     | No       |
+| regex       | `/\n\s*[-*+–—]/`        | No       |
+
+
+#### Example
+
+```js
+import { lang } from 'portable-text-tools'
+
+export default {
+  title: 'Content',
+  name: 'content',
+  type: 'array',
+  of: [
+    {
+      type: 'block',
+    }
+  ],
+  validation: (Rule) => Rule.custom(noFakeLists)
 }
 ```
