@@ -72,10 +72,6 @@ export default {
       type: 'block',
     }
   ],
-  validation: (Rule) =>
-      Rule
-        .custom(noFakeHeadings)
-        .custom(noFakeLists)
-        .custom(avoidGenericLinkText)    
+  validation: (Rule) => Rule.custom(noFakeLists)
 }
 ```
