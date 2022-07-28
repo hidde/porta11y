@@ -7,6 +7,7 @@ It provides an incredible opportunity to create editing experiences with accessi
 - [Language switcher](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
 
 ## Annotations
+
 ### Language switcher
 
 The `lang` utility provides an annotation to demark an inline text snippet as being expressed in another language than the main content. This is important for screen-readers (WCAG 2.1 SC 3.1.2 and ATAG B.2.1.1). Refer to [this article](https://kittygiraudel.com/2022/07/25/international-content-with-sanity-portable-text/) for more information.
@@ -34,30 +35,32 @@ export default {
   of: [
     {
       type: 'block',
-      annotations: [
-        lang({
-          title: 'Autre langue',
-          fieldTitle: 'Code de langue',
-          /* Other options … */
-        }),
-      ],
+      marks: {
+        annotations: [
+          lang({
+            title: 'Autre langue',
+            fieldTitle: 'Code de langue',
+            /* Other options … */
+          }),
+        ],
+      },
     },
   ],
 }
 ```
 
 ## Validations
+
 ### No fake lists
 
 Sometimes lists on web pages are not marked up as lists, with `ul`, `ol` or `dl` elements, but separate list items with merely returns instead. This validation rule finds those cases.
 
 #### Options
 
-| Option name | Default value           | Required |
-| :---------- | :---------------------- | :------- |
-| message     | This looks like a list, but it is plain text. Use the bulleted list option.     | No       |
-| regex       | `/\n\s*[-*+–—]/`        | No       |
-
+| Option name | Default value | Required |
+| :-- | :-- | :-- |
+| message | This looks like a list, but it is plain text. Use the bulleted list option. | No |
+| regex | `/\n\s*[-*+–—]/` | No |
 
 #### Example
 
@@ -71,8 +74,8 @@ export default {
   of: [
     {
       type: 'block',
-    }
+    },
   ],
-  validation: (Rule) => Rule.custom(noFakeLists)
+  validation: Rule => Rule.custom(noFakeLists),
 }
 ```
