@@ -1,5 +1,5 @@
 {
-  "name": "portable-text-tools",
+  "name": "porta11y",
   "description": "Sanity accessibility utilities for Portable Text editors, like language changes or abbreviations.",
   "version": "0.1.0",
   "main": "src/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hidde/portable-text-tools.git"
+    "url": "git+https://github.com/hidde/porta11y.git"
   },
   "keywords": [
     "sanity",
@@ -22,7 +22,7 @@
   "author": "Hidde de Vries, Kitty Giraudel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hidde/portable-text-tools/issues"
+    "url": "https://github.com/hidde/porta11y/issues"
   },
-  "homepage": "https://github.com/hidde/portable-text-tools#readme"
+  "homepage": "https://github.com/hidde/porta11y#readme"
 }
