@@ -5,6 +5,7 @@
 It provides an incredible opportunity to create editing experiences with accessibility in mind. This repository is a collection of Portable Text utilities to enrich the base editor with additional accessibility-related tools. Namely:
 
 - [Language switcher](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
+- [Fake lists validator](#no-fake-lists): a custom validation function to make sure lists are done via the appropriate list feature and not with text markers, resulting in more semantic HTML.
 
 ## Annotations
 
