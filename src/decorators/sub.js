@@ -19,7 +19,7 @@ const MaterialDesignSubscript = React.createElement(
 )
 
 /**
- * @param {Object} [options = {}] - Options for the annotation
+ * @param {Object} [options = {}] - Options for the decorator
  * @param {String} [options.title = "Sub"] - Title for the decorator
  * @param {String} [options.value = "sub"] - Value of the decorator
  * @param {ReactElement} [options.icon = Material Design “Subscript” icon] - JSX for the toolbar icon

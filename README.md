@@ -7,6 +7,8 @@ Porta11y is a collection of accessibility-focused annotations, decorators and va
 It provides an incredible opportunity to create editing experiences with accessibility in mind. This repository is a collection of Portable Text utilities to enrich the base editor with additional accessibility-related tools. Namely:
 
 - [Lang annotation](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
+- [Del decorator](#deletion): a decorator to demark text snippets as being deleted.
+- [Ins decorator](#insertion): a decorator to demark text snippets as being inserted.
 - [Sub decorator](#sub): a decorator to demark text snippets as being subscript.
 - [Sup decorator](#sup): a decorator to demark text snippets as being superscript.
 - [Fake lists validator](#no-fake-lists): a custom validation function to make sure lists are done via the appropriate list feature and not with text markers, resulting in more semantic HTML.
@@ -118,6 +120,72 @@ export default {
       type: 'block',
       marks: {
         decorators: [{ title: 'Strong', value: 'strong' }, sup()],
+      },
+    },
+  ],
+}
+```
+
+### Deletion
+
+The `del` utility is a decorator to mark a text snippet as being a text deletion.
+
+#### Options
+
+| Option name | Default value                      | Required |
+| :---------- | :--------------------------------- | :------- |
+| title       | Deletion                           | No       |
+| value       | del                                | No       |
+| icon        | Material Design “PencilMinus” icon | No       |
+| Component   | del (+ additional styles)          | No       |
+
+#### Example
+
+```js
+import { del } from 'porta11y'
+
+export default {
+  title: 'Content',
+  name: 'content',
+  type: 'array',
+  of: [
+    {
+      type: 'block',
+      marks: {
+        decorators: [{ title: 'Strong', value: 'strong' }, del()],
+      },
+    },
+  ],
+}
+```
+
+### Insertion
+
+The `ins` utility is a decorator to mark a text snippet as being a text insertion.
+
+#### Options
+
+| Option name | Default value                     | Required |
+| :---------- | :-------------------------------- | :------- |
+| title       | Insertion                         | No       |
+| value       | ins                               | No       |
+| icon        | Material Design “PencilPlus” icon | No       |
+| Component   | ins (+ additional styles)         | No       |
+
+#### Example
+
+```js
+import { ins } from 'porta11y'
+
+export default {
+  title: 'Content',
+  name: 'content',
+  type: 'array',
+  of: [
+    {
+      type: 'block',
+      marks: {
+        decorators: [{ title: 'Strong', value: 'strong' }, ins()],
       },
     },
   ],
