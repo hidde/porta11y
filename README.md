@@ -15,14 +15,16 @@ The `lang` utility provides an annotation to demark an inline text snippet as be
 
 #### Options
 
-| Option name | Default value           | Required |
-| :---------- | :---------------------- | :------- |
-| title       | Language switcher       | No       |
-| name        | lang                    | No       |
-| fieldTitle  | Language tag            | No       |
-| fieldName   | tag                     | No       |
-| regex       | `/^[a-z]+(-[a-z]+)?$/i` | No       |
-| regexName   | language tag            | No       |
+| Option name | Default value                    | Required |
+| :---------- | :------------------------------- | :------- |
+| title       | Language switcher                | No       |
+| name        | lang                             | No       |
+| fieldTitle  | Language tag                     | No       |
+| fieldName   | tag                              | No       |
+| regex       | `/^[a-z]+(-[a-z]+)?$/i`          | No       |
+| regexName   | language tag                     | No       |
+| icon        | Material Design “Translate” icon | No       |
+| Component   | Custom Portable Text renderer    | No       |
 
 #### Example
 
