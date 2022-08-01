@@ -29,7 +29,7 @@ The `lang` utility provides an annotation to demark an inline text snippet as be
 #### Example
 
 ```js
-import { lang } from 'portable-text-tools'
+import { lang } from 'porta11y'
 
 export default {
   title: 'Content',
@@ -68,7 +68,7 @@ Sometimes lists on web pages are not marked up as lists, with `ul`, `ol` or `dl`
 #### Example
 
 ```js
-import { noFakeLists } from 'portable-text-tools'
+import { noFakeLists } from 'porta11y'
 
 export default {
   title: 'Content',
