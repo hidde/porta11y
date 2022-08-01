@@ -19,7 +19,7 @@ const MaterialDesignSuperscript = React.createElement(
 )
 
 /**
- * @param {Object} [options = {}] - Options for the annotation
+ * @param {Object} [options = {}] - Options for the decorator
  * @param {String} [options.title = "Sup"] - Title for the decorator
  * @param {String} [options.value = "sup"] - Value of the decorator
  * @param {ReactElement} [options.icon = Material Design “Superscript” icon] - JSX for the toolbar icon
