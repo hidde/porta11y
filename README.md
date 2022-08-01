@@ -7,6 +7,7 @@ Porta11y is a collection of accessibility-focused annotations, decorators and va
 It provides an incredible opportunity to create editing experiences with accessibility in mind. This repository is a collection of Portable Text utilities to enrich the base editor with additional accessibility-related tools. Namely:
 
 - [Lang annotation](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
+- [Sub decorator](#sub): a decorator to demark text snippets as being subscript.
 - [Sup decorator](#sup): a decorator to demark text snippets as being superscript.
 - [Fake lists validator](#no-fake-lists): a custom validation function to make sure lists are done via the appropriate list feature and not with text markers, resulting in more semantic HTML.
 
@@ -56,6 +57,39 @@ export default {
 ```
 
 ## Decorators
+
+### Sub
+
+The `sub` utility is a decorator to mark a text snippet as being subscript.
+
+#### Options
+
+| Option name | Default value                    | Required |
+| :---------- | :------------------------------- | :------- |
+| title       | Sub                              | No       |
+| value       | sub                              | No       |
+| icon        | Material Design “Subscript” icon | No       |
+| Component   | sub                              | No       |
+
+#### Example
+
+```js
+import { sub } from 'porta11y'
+
+export default {
+  title: 'Content',
+  name: 'content',
+  type: 'array',
+  of: [
+    {
+      type: 'block',
+      marks: {
+        decorators: [{ title: 'Strong', value: 'strong' }, sub()],
+      },
+    },
+  ],
+}
+```
 
 ### Sup
 
