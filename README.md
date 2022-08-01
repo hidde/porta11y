@@ -1,5 +1,7 @@
 # Porta11y
 
+Porta11y is a collection of accessibility-focused annotations, decorators and validators for Sanity’s Portable Text editor.
+
 [Portable Text](https://www.sanity.io/guides/introduction-to-portable-text) is a JSON based rich text specification for modern content editing platforms. It is designed to be a format for text editing interfaces and for serializing into any human-readable format.
 
 It provides an incredible opportunity to create editing experiences with accessibility in mind. This repository is a collection of Portable Text utilities to enrich the base editor with additional accessibility-related tools. Namely:

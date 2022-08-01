@@ -1,6 +1,6 @@
 {
   "name": "porta11y",
-  "description": "Sanity accessibility utilities for Portable Text editors, like language changes or abbreviations.",
+  "description": "Porta11y is a collection of accessibility-focused annotations, decorators and validators for Sanity’s Portable Text editor.",
   "version": "0.1.1",
   "main": "src/index.js",
   "files": [
@@ -17,7 +17,11 @@
     "sanity",
     "portable",
     "text",
-    "tools"
+    "tools",
+    "annotations",
+    "decorators",
+    "validators",
+    "pt"
   ],
   "author": "Hidde de Vries, Kitty Giraudel",
   "license": "MIT",
