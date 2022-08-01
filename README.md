@@ -6,7 +6,8 @@ Porta11y is a collection of accessibility-focused annotations, decorators and va
 
 It provides an incredible opportunity to create editing experiences with accessibility in mind. This repository is a collection of Portable Text utilities to enrich the base editor with additional accessibility-related tools. Namely:
 
-- [Language switcher](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
+- [Lang annotation](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
+- [Sup decorator](#sup): a decorator to demark text snippets as being superscript.
 - [Fake lists validator](#no-fake-lists): a custom validation function to make sure lists are done via the appropriate list feature and not with text markers, resulting in more semantic HTML.
 
 ## Annotations
@@ -17,19 +18,21 @@ The `lang` utility provides an annotation to demark an inline text snippet as be
 
 #### Options
 
-| Option name | Default value           | Required |
-| :---------- | :---------------------- | :------- |
-| title       | Language switcher       | No       |
-| name        | lang                    | No       |
-| fieldTitle  | Language tag            | No       |
-| fieldName   | tag                     | No       |
-| regex       | `/^[a-z]+(-[a-z]+)?$/i` | No       |
-| regexName   | language tag            | No       |
+| Option name | Default value                    | Required |
+| :---------- | :------------------------------- | :------- |
+| title       | Language switcher                | No       |
+| name        | lang                             | No       |
+| fieldTitle  | Language tag                     | No       |
+| fieldName   | tag                              | No       |
+| regex       | `/^[a-z]+(-[a-z]+)?$/i`          | No       |
+| regexName   | language tag                     | No       |
+| icon        | Material Design “Translate” icon | No       |
+| Component   | Custom Portable Text renderer    | No       |
 
 #### Example
 
 ```js
-import { lang } from 'portable-text-tools'
+import { lang } from 'porta11y'
 
 export default {
   title: 'Content',
@@ -52,6 +55,41 @@ export default {
 }
 ```
 
+## Decorators
+
+### Sup
+
+The `sup` utility is a decorator to mark a text snippet as being superscript.
+
+#### Options
+
+| Option name | Default value                      | Required |
+| :---------- | :--------------------------------- | :------- |
+| title       | Sup                                | No       |
+| value       | sup                                | No       |
+| icon        | Material Design “Superscript” icon | No       |
+| Component   | sup                                | No       |
+
+#### Example
+
+```js
+import { sup } from 'porta11y'
+
+export default {
+  title: 'Content',
+  name: 'content',
+  type: 'array',
+  of: [
+    {
+      type: 'block',
+      marks: {
+        decorators: [{ title: 'Strong', value: 'strong' }, sup()],
+      },
+    },
+  ],
+}
+```
+
 ## Validations
 
 ### No fake lists
@@ -68,7 +106,7 @@ Sometimes lists on web pages are not marked up as lists, with `ul`, `ol` or `dl`
 #### Example
 
 ```js
-import { noFakeLists } from 'portable-text-tools'
+import { noFakeLists } from 'porta11y'
 
 export default {
   title: 'Content',
