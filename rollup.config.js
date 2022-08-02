@@ -1,4 +1,5 @@
 import babel from '@rollup/plugin-babel'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import pkg from './package.json'
 
 export default {
@@ -8,6 +9,7 @@ export default {
     { file: pkg.main, format: 'cjs' },
   ],
   plugins: [
+    nodeResolve(),
     babel({
       presets: ['@babel/preset-react'],
       exclude: 'node_modules/**',
