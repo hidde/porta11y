@@ -13,6 +13,12 @@ It provides an incredible opportunity to create editing experiences with accessi
 - [Sup decorator](#sup): a decorator to demark text snippets as being superscript.
 - [Fake lists validator](#no-fake-lists): a custom validation function to make sure lists are done via the appropriate list feature and not with text markers, resulting in more semantic HTML.
 
+## Installation
+
+```sh
+npm install porta11y
+```
+
 ## Annotations
 
 ### Language switcher
