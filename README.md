@@ -7,10 +7,8 @@ Porta11y is a collection of accessibility-focused annotations, decorators and va
 It provides an incredible opportunity to create editing experiences with accessibility in mind. This repository is a collection of Portable Text utilities to enrich the base editor with additional accessibility-related tools. Namely:
 
 - [Lang annotation](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
-- [Del decorator](#deletion): a decorator to demark text snippets as being deleted.
-- [Ins decorator](#insertion): a decorator to demark text snippets as being inserted.
-- [Sub decorator](#sub): a decorator to demark text snippets as being subscript.
-- [Sup decorator](#sup): a decorator to demark text snippets as being superscript.
+- [Del](#deletion) and [ins](#insertion) decorators: a pair of decorators to demark text snippets as being inserted or deleted.
+- [Sub](#sub) and [sup](#sup) decorators: a pair of decorators to demark text snippets as being subscript or superscript.
 - [Fake lists validator](#no-fake-lists): a custom validation function to make sure lists are done via the appropriate list feature and not with text markers, resulting in more semantic HTML.
 
 ## Installation
