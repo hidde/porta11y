@@ -1,5 +1,7 @@
 # Contributing
 
+Because some files contain JSX code, the project is bundled with Rollup to compile JSX into plain JavaScript. Source files are in the `src` directory, and a `dist` directory is generated with output files. Compilation can be done via `npm run build`, or `npm run dev` to run a watcher.
+
 To try and work on the annotations and validators, one can initialize a new Sanity project within the repository with `sanity init` (make sure you have [Sanity globally installed](https://www.sanity.io/docs/getting-started-with-sanity-cli) first). Follow the instructions to get a Sanity project going.
 
 Then, update the `schema.js` file so it looks like this (adjust to suit your needs):
@@ -7,7 +9,10 @@ Then, update the `schema.js` file so it looks like this (adjust to suit your nee
 ```js
 import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
-import { lang, noFakeLists } from '../../src'
+// For Sanity v2:
+import { lang, noFakeLists } from '../../dist/porta11y'
+// For Sanity v3:
+// import { lang, noFakeLists } from '../../dist/porta11y.esm'
 
 export default createSchema({
   name: 'default',

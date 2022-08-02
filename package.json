@@ -2,12 +2,14 @@
   "name": "porta11y",
   "description": "Porta11y is a collection of accessibility-focused annotations, decorators and validators for Sanity’s Portable Text editor.",
   "version": "0.3.0",
-  "main": "src/index.js",
+  "main": "dist/porta11y.js",
+  "module": "dist/porta11y.esm.js",
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "dev": "rollup -c --watch"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,10 @@
   "bugs": {
     "url": "https://github.com/hidde/porta11y/issues"
   },
-  "homepage": "https://github.com/hidde/porta11y#readme"
+  "homepage": "https://github.com/hidde/porta11y#readme",
+  "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@rollup/plugin-babel": "^5.3.1",
+    "rollup": "^2.77.2"
+  }
 }
