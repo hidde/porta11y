@@ -1,6 +1,6 @@
 # Porta11y
 
-Porta11y is a collection of accessibility-focused annotations, decorators and validators for Sanity’s Portable Text editor.
+Porta11y is a collection of accessibility-focused blocks, annotations, decorators and validators for Sanity’s Portable Text editor.
 
 [Portable Text](https://www.sanity.io/guides/introduction-to-portable-text) is a JSON based rich text specification for modern content editing platforms. It is designed to be a format for text editing interfaces and for serializing into any human-readable format.
 
@@ -9,6 +9,7 @@ It provides an incredible opportunity to create editing experiences with accessi
 - [Lang annotation](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
 - [Del](#deletion) and [ins](#insertion) decorators: a pair of decorators to demark text snippets as being inserted or deleted.
 - [Sub](#sub) and [sup](#sup) decorators: a pair of decorators to demark text snippets as being subscript or superscript.
+- [Horizontal rule](#horizontal-rule): a block to author a horizontal rule which can then be mapped to a `<hr>` element.
 - [Fake lists validator](#no-fake-lists): a custom validation function to make sure lists are done via the appropriate list feature and not with text markers, resulting in more semantic HTML.
 
 ## Installation
@@ -193,6 +194,31 @@ export default {
       },
     },
   ],
+}
+```
+
+## Blocks
+
+### Horizontal rule
+
+#### Options
+
+| Option name | Default value                         | Required |
+| :---------- | :------------------------------------ | :------- |
+| title       | Horizontal rule                       | No       |
+| name        | hr                                    | No       |
+| icon        | Material Design “HorizontalRule” icon | No       |
+
+#### Example
+
+```js
+import { hr } from 'porta11y'
+
+export default {
+  title: 'Content',
+  name: 'content',
+  type: 'array',
+  of: [{ type: 'block' }, hr()],
 }
 ```
 
