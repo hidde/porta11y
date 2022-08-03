@@ -136,12 +136,12 @@ The `del` utility is a decorator to mark a text snippet as being a text deletion
 
 #### Options
 
-| Option name | Default value                      | Required |
-| :---------- | :--------------------------------- | :------- |
-| title       | Deletion                           | No       |
-| value       | del                                | No       |
-| icon        | Material Design “PencilMinus” icon | No       |
-| Component   | del (+ additional styles)          | No       |
+| Option name | Default value             | Required |
+| :---------- | :------------------------ | :------- |
+| title       | Deletion                  | No       |
+| value       | del                       | No       |
+| icon        | VSC “DiffRemoved” icon    | No       |
+| Component   | del (+ additional styles) | No       |
 
 #### Example
 
@@ -169,12 +169,12 @@ The `ins` utility is a decorator to mark a text snippet as being a text insertio
 
 #### Options
 
-| Option name | Default value                     | Required |
-| :---------- | :-------------------------------- | :------- |
-| title       | Insertion                         | No       |
-| value       | ins                               | No       |
-| icon        | Material Design “PencilPlus” icon | No       |
-| Component   | ins (+ additional styles)         | No       |
+| Option name | Default value             | Required |
+| :---------- | :------------------------ | :------- |
+| title       | Insertion                 | No       |
+| value       | ins                       | No       |
+| icon        | VSC “DiffAdded” icon      | No       |
+| Component   | ins (+ additional styles) | No       |
 
 #### Example
 
