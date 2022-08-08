@@ -1,3 +1,4 @@
+export { default as abbr } from './annotations/abbr'
 export { default as lang } from './annotations/lang'
 
 export { default as del } from './decorators/del'
