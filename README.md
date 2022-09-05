@@ -7,6 +7,7 @@ Porta11y is a collection of accessibility-focused blocks, annotations, decorator
 It provides an incredible opportunity to create editing experiences with accessibility in mind. This repository is a collection of Portable Text utilities to enrich the base editor with additional accessibility-related tools. Namely:
 
 - [Lang annotation](#language-switcher): an annotation to demark text snippets as being expressed in another language than the main content.
+- [Abbr annotation](#abbreviation): an annotation to provide a definition to an abbreviation or an acronym.
 - [Del](#deletion) and [ins](#insertion) decorators: a pair of decorators to demark text snippets as being inserted or deleted.
 - [Sub](#sub) and [sup](#sup) decorators: a pair of decorators to demark text snippets as being subscript or superscript.
 - [Horizontal rule](#horizontal-rule): a block to author a horizontal rule which can then be mapped to a `<hr>` element.
@@ -57,6 +58,41 @@ export default {
             /* Other options … */
           }),
         ],
+      },
+    },
+  ],
+}
+```
+
+### Abbreviation
+
+The `abbr` annotation can be used to give a definition to an abbreviation or an acronym.
+
+#### Options
+
+| Option name | Default value                       | Required |
+| :---------- | :---------------------------------- | :------- |
+| title       | Abbreviation                        | No       |
+| name        | abbr                                | No       |
+| fieldTitle  | Definition                          | No       |
+| fieldName   | definition                          | No       |
+| icon        | Material Design “Help Outline” icon | No       |
+| Component   | Custom Portable Text renderer       | No       |
+
+#### Example
+
+```js
+import { abbr } from 'porta11y'
+
+export default {
+  title: 'Content',
+  name: 'content',
+  type: 'array',
+  of: [
+    {
+      type: 'block',
+      marks: {
+        annotations: [abbr()],
       },
     },
   ],
